@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/website/home.css">
+    <title>Meeting planner application</title>
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'room_list' %}">Rooms</a>
+        <a href="{% url 'form' %}">New meeting</a>
+    </div>
+    <section class="content">
+        <div class="content-main">
+            <div class="static">
+                <h1 class="content-main-header">Meeting planner</h1>
+                <p class="content-main-para">{{ message }}</p>
+                <h2 class="content-sec-header"> Meetings </h2>
+            </div>
+            <ul class="content-ul">
+                {% for meeting in meetings %}
+                <li class="content-ul-item">
+                    <a class="content-ul-item-list" href="{% url 'detail' meeting.id %}"> {{ meeting.title }} </a>
+                </li>
+                {% endfor %}
+            </ul>            
+        </div>
+    </section>
+    <section class="main-footer"></section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to left, rgb(115, 47, 126),rgb(206, 238, 0));
+}
+
+.content-main {
+    background-color: rgb(0, 255, 255, 0.25);
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 25px;
+    padding-top: 10px;
+    overflow: auto;
+    height: 275px;
+    margin-top: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+button {
+    border: none;
+    color: yellowgreen;
+    background-color: yellow;
+}
